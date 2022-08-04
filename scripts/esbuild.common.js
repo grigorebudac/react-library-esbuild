@@ -24,7 +24,7 @@ module.exports = function (buildType = "esm") {
         entryPoints: files,
         splitting,
         format,
-        outdir: `dist/${format}`,
+        outdir: `dist`,
         treeShaking: true,
         minify: true,
         bundle: true,

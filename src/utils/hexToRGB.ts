@@ -1,3 +1,3 @@
-const hexToRGB = (color: string) => {
+export const hexToRGB = (color: string) => {
   return color;
 };

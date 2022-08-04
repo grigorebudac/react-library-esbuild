@@ -1,9 +1,11 @@
 import React, { PropsWithChildren } from "react";
 
-interface TextProps {}
+interface TextProps {
+  color?: string;
+}
 
 const Text = (props: PropsWithChildren<TextProps>) => {
-  return <p>{props.children}</p>;
+  return <p style={{ color: props.color }}>{props.children}</p>;
 };
 
-export default Text;
+export { Text };

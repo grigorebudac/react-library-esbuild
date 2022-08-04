@@ -1,3 +1,3 @@
-const pxToRem = (px: number) => {
+export const pxToRem = (px: number) => {
   return px;
 };
