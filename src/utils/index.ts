@@ -1,2 +1,1 @@
-export * from "./hexToRGB";
-export * from "./pxToRem";
+export * from "./theme.utils";

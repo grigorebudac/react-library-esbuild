@@ -17,7 +17,7 @@ module.exports = function (buildType = "esm") {
   const { format, splitting } = buildTypes[buildType];
 
   return function (customOptions = {}) {
-    const files = glob.sync("{./src/**/*.tsx,./src/**/*.ts}");
+    const files = glob.sync("{./src/**/!(*.test).ts, ./src/**/!(*.test).tsx}");
 
     esbuild
       .build({
