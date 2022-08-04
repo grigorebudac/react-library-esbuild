@@ -1,6 +1,7 @@
 const esbuild = require("esbuild");
 const glob = require("glob");
 const { nodeExternalsPlugin } = require("esbuild-node-externals");
+const { dtsPlugin } = require("esbuild-plugin-d.ts");
 
 const buildTypes = {
   cjs: {
@@ -30,10 +31,14 @@ module.exports = function (buildType = "esm") {
         bundle: true,
         sourcemap: true,
         chunkNames: "__chunks__/[name]-[hash]",
-        target: ["es2015"],
+        target: "es6",
         tsconfig: "./tsconfig.json",
-        platform: "node",
-        plugins: [nodeExternalsPlugin()],
+        plugins: [
+          nodeExternalsPlugin(),
+          dtsPlugin({
+            outDir: "./dist/types",
+          }),
+        ],
         ...customOptions,
       })
       .then(() => {

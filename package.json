@@ -1,6 +1,6 @@
 {
   "name": "@grigorebudac/react-library-esbuild",
-  "description": "Sammple React.js library with typescript and esbuild",
+  "description": "Sample React.js library with typescript and esbuild",
   "author": "Grigore Budac",
   "version": "1.0.0",
   "license": "MIT",
@@ -11,8 +11,8 @@
   "scripts": {
     "start": "yarn watch",
     "build:types": "tsc",
-    "build": "rimraf dist && node scripts/esbuild.build.js && yarn build:types && cp package.json dist",
-    "watch": "node scripts/esbuild.watch.js && yarn build:types -- --watch",
+    "build": "rimraf dist && node scripts/esbuild.build.js && cp package.json dist",
+    "watch": "yarn build && node scripts/esbuild.watch.js",
     "test": "jest",
     "test:watch": "yarn test --watch"
   },
@@ -22,6 +22,7 @@
     "@types/react": "^18.0.15",
     "esbuild": "^0.14.53",
     "esbuild-node-externals": "^1.4.1",
+    "esbuild-plugin-d.ts": "^1.1.0",
     "glob": "^8.0.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^28.1.3",
