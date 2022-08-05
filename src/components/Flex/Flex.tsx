@@ -1,6 +1,6 @@
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren } from 'react';
 
-import { Box } from "components/Box";
+import { Box } from 'components/Box';
 
 interface FlexProps {}
 
