@@ -1,6 +1,6 @@
 {
   "name": "@grigorebudac/react-library-esbuild",
-  "description": "Sample React.js library with typescript and esbuild",
+  "description": "Simple React.js library with typescript and esbuild",
   "author": "Grigore Budac",
   "version": "1.0.0",
   "license": "MIT",
